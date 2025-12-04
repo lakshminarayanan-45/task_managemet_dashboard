@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Mail, CheckCircle } from "lucide-react";
+import { KanbanBoard } from "@/components/tasks/KanbanBoard";
 
 export default function Team() {
   const { tasks } = useTaskContext();
@@ -54,6 +55,12 @@ export default function Team() {
             </Card>
           );
         })}
+      </div>
+
+      {/* Kanban Board */}
+      <div className="mt-8">
+        <h2 className="text-xl font-semibold mb-4">Team Tasks</h2>
+        <KanbanBoard />
       </div>
     </div>
   );
